@@ -208,10 +208,14 @@ export default function Navbar() {
             </nav>
 
             {/* ================= HERO SECTION ================= */}
-            <section
-                className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 lg:px-24 overflow-hidden"
-                style={{ backgroundImage: `url(${heroImg})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
-            >
+            <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 lg:px-24 overflow-hidden">
+
+                {/* Background Image */}
+                <img
+                    src={heroImg}
+                    alt="hero bg"
+                    className="absolute inset-0 w-full h-full object-cover object-center scale-75 origin-center"
+                />
                 <div className="absolute inset-0 bg-black/50 z-0" />
 
                 <div className="relative z-10 flex flex-col items-center text-center max-w-4xl w-full">
