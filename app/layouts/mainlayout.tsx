@@ -12,13 +12,15 @@
 //         </div>
 //     );
 // }
+// layouts/mainlayout.tsx
+import { Outlet } from "react-router";
 import Navbar from "../components/shared/Navbar";
 
-export default function Home() {
+export default function MainLayout() {
     return (
         <>
             <Navbar />
-            <h1>Home Page</h1>
+            <Outlet />  {/* ✅ এটা অবশ্যই থাকতে হবে */}
         </>
     );
 }
