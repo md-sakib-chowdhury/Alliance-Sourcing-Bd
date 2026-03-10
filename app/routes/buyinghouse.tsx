@@ -1,5 +1,5 @@
 // routes/buyinghouse.tsx
-import heroImg from "../components/Assets/51.png";
+import heroImg from "../components/Assets/52.png";
 
 export function loader() { return {}; }
 
