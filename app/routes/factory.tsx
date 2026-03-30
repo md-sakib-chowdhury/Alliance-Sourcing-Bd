@@ -8,8 +8,11 @@
 //         </div>
 //     );
 // }
+// 
 import { Link } from "react-router";
 import heroImg from "../components/Assets/image 1.png";
+import heroImg2 from "../components/Assets/image 6.png";
+import heroImg3 from "../components/Assets/Card.png"; // ✅ 2য় image এর path দিন
 
 export function loader() { return {}; }
 
@@ -30,7 +33,8 @@ export default function Factory() {
         <main className="w-full overflow-x-hidden font-sans">
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative w-full h-56 sm:h-72 md:h-80 flex flex-col items-center justify-center text-center px-4 sm:px-8 mt-12">
+            {/* ✅ height বাড়ানো হয়েছে */}
+            <section className="relative w-full h-[500px] sm:h-[550px] md:h-[600px] flex flex-col items-center justify-center text-center px-4 sm:px-8 mt-12">
                 <img
                     src={heroImg}
                     alt="factory hero"
@@ -38,7 +42,6 @@ export default function Factory() {
                 />
                 <div className="absolute inset-0 bg-black/55 z-0" />
                 <div className="relative z-10 flex flex-col items-center px-4">
-                    {/* Breadcrumb */}
                     <div className="flex items-center gap-2 text-white/70 text-xs sm:text-sm mb-3 sm:mb-4 flex-wrap justify-center">
                         <Link to="/" className="hover:text-white transition-colors">Home</Link>
                         <span>›</span>
@@ -66,13 +69,27 @@ export default function Factory() {
                         Are you interested to know details about our factory, production system and
                         company policy at a glance? Please have a look at the provided pdf file.
                     </p>
-                    {/* Buttons */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <button className="flex items-center gap-3 px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition-all duration-200 shadow-md text-sm min-w-[160px]">
-                            <span className="text-lg">📄</span>
-                            <div className="text-left">
-                                <p className="text-[10px] text-white/70 leading-none">DOWNLOAD</p>
-                                <p className="text-xs font-bold leading-none">FILE</p>
+                        <button className="flex items-center gap-0 overflow-hidden rounded-xl shadow-md min-w-[180px] border border-gray-700">
+                            <div className="bg-red-600 hover:bg-red-700 transition-colors px-4 py-4 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" />
+                                    <rect x="4" y="18" width="16" height="2" rx="1" />
+                                </svg>
+                            </div>
+                            <div className="bg-[#1a1a1a] hover:bg-[#2a2a2a] transition-colors px-4 py-3 flex items-center gap-3 flex-1">
+                                <div className="text-left">
+                                    <p className="text-[10px] text-white/60 uppercase tracking-widest leading-none mb-0.5">DOWNLOAD</p>
+                                    <p className="text-sm font-bold text-white leading-none">FILE</p>
+                                </div>
+                                <div className="ml-auto flex flex-col items-center">
+                                    <div className="bg-red-600 text-white text-[8px] font-bold px-1.5 py-0.5 rounded-sm leading-none mb-0.5">PDF</div>
+                                    <div className="w-6 h-7 bg-white/10 rounded-sm flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 text-white/70" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
                         </button>
                         <button className="px-7 py-3 bg-[#1a9fd4] hover:bg-[#1589b8] text-white font-semibold rounded-xl transition-all duration-200 shadow-md text-sm min-w-[120px]">
@@ -93,17 +110,19 @@ export default function Factory() {
                         </p>
                     </div>
 
-                    {/* Machinery Images Grid */}
+                    {/* ✅ দুটো image পাশাপাশি */}
+                    {/* ✅ দুটো আলাদা card - প্রতিটায় একটা image */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         {[
-                            { label: "NEEDLE DETECTOR MACHINE" },
-                            { label: "THREAD SUCKING MACHINE" },
+                            { label: "NEEDLE DETECTOR MACHINE", img: heroImg2 },  // needle detector এর image
+                            { label: "THREAD SUCKING MACHINE", img: heroImg3 },   // thread sucking এর image
                         ].map((machine) => (
-                            <div key={machine.label} className="relative w-full h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden bg-gray-300 group">
-                                {/* Image placeholder */}
-                                <div className="w-full h-full bg-gray-300 flex items-center justify-center text-gray-500 text-sm">
-                                    📷 Image এখানে বসাও
-                                </div>
+                            <div key={machine.label} className="relative w-full h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden group">
+                                <img
+                                    src={machine.img}
+                                    alt={machine.label}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
                                 {/* Label overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 px-4 sm:px-6 py-3 sm:py-4">
                                     <p className="text-white font-bold text-sm sm:text-base tracking-widest uppercase">
@@ -122,13 +141,9 @@ export default function Factory() {
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 text-center mb-8 sm:mb-12">
                         Our Machinery Inventory
                     </h2>
-
-                    {/* Table */}
                     <div className="mb-3">
                         <h3 className="text-center text-base sm:text-lg font-bold text-gray-800 mb-4 sm:mb-6">Cutting Machinery</h3>
                     </div>
-
-                    {/* Responsive table wrapper */}
                     <div className="w-full overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
                         <table className="w-full min-w-[500px] text-sm">
                             <thead>
@@ -141,17 +156,13 @@ export default function Factory() {
                             </thead>
                             <tbody>
                                 {cuttingMachinery.map((row, index) => (
-                                    <tr
-                                        key={row.sl}
-                                        className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${index % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}
-                                    >
+                                    <tr key={row.sl} className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${index % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}>
                                         <td className="px-4 sm:px-6 py-3 sm:py-4 text-gray-500 text-xs sm:text-sm">{row.sl}</td>
                                         <td className="px-4 sm:px-6 py-3 sm:py-4 text-gray-800 text-xs sm:text-sm font-medium">{row.name}</td>
                                         <td className="px-4 sm:px-6 py-3 sm:py-4 text-gray-500 text-xs sm:text-sm">{row.brand}</td>
                                         <td className="px-4 sm:px-6 py-3 sm:py-4 text-gray-800 text-xs sm:text-sm text-right">{row.qty}</td>
                                     </tr>
                                 ))}
-                                {/* Total Row */}
                                 <tr className="bg-gray-50 border-t-2 border-gray-300">
                                     <td colSpan={3} className="px-4 sm:px-6 py-3 sm:py-4 text-right text-xs sm:text-sm font-bold text-gray-700">
                                         Total Cutting Machinery

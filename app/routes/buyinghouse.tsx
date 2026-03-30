@@ -23,12 +23,12 @@
 //         </section>
 //     );
 // }
+// 
 import { Link } from "react-router";
-import heroImg from "../components/Assets/52.png";
+import heroImg from "../components/Assets/image 3.png";
 
 export function loader() { return {}; }
 
-// Product data
 const products = {
     knitwear: {
         label: "Knitwear",
@@ -36,37 +36,38 @@ const products = {
             {
                 name: "T-Shirt",
                 items: [
-                    { name: "Classic Cotton Crew T-Shirt" },
-                    { name: "Premium Soft Touch V-Neck T-Shirt" },
-                    { name: "Pique Polo Shirt" },
-                    { name: "Urban Style Graphic T-Shirt" },
+                    { name: "Classic Cotton Crew T-Shirt", img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80" },
+                    { name: "Premium Soft Touch V-Neck T-Shirt", img: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&q=80" },
+                    { name: "Pique Polo Shirt", img: "https://images.unsplash.com/photo-1598032895397-b9472444bf93?w=400&q=80" },
+                    { name: "Urban Style Graphic T-Shirt", img: "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&q=80" },
                 ],
             },
             {
                 name: "Polo",
                 items: [
-                    { name: "Classic Pique Polo Shirt" },
-                    { name: "Premium Soft Touch V-Neck T-Shirt" },
-                    { name: "Sport Dry Polo Shirt" },
-                    { name: "Urban Style Graphic T-Shirt" },
+                    { name: "Urban Style Graphic T-Shirt", img: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=400&q=80" },
+
+                    { name: "Sport Dry Polo Shirt", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&q=80" },
+                    { name: "Urban Style Graphic T-Shirt", img: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=400&q=80" },
+                    { name: "Sport Dry Polo Shirt", img: "https://images.unsplash.com/photo-1571945153237-4929e783af4a?w=400&q=80" },
                 ],
             },
             {
                 name: "Hoodie",
                 items: [
-                    { name: "Classic Pullover Hoodie" },
-                    { name: "Zipper Front Fleece Hoodie" },
-                    { name: "Premium Heavyweight Hoodie" },
-                    { name: "Streetwear Oversized Hoodie" },
+                    { name: "Classic Pullover Hoodie", img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&q=80" },
+                    { name: "Zipper Front Fleece Hoodie", img: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&q=80" },
+                    { name: "Premium Heavyweight Hoodie", img: "https://images.unsplash.com/photo-1565693413579-8ff3fdc1b03b?w=400&q=80" },
+                    { name: "Premium Heavyweight Hoodie", img: "https://images.unsplash.com/photo-1565693413579-8ff3fdc1b03b?w=400&q=80" },
                 ],
             },
             {
                 name: "Jeansnes",
                 items: [
-                    { name: "Stretch Fit Denim Jeggings" },
-                    { name: "High-Waist Slim Jeggings" },
-                    { name: "Comfort Flex Jeggings" },
-                    { name: "Streetwear Oversized Hoodie" },
+                    { name: "Stretch Fit Denim Jeggings", img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&q=80" },
+                    { name: "High-Waist Slim Jeggings", img: "https://images.unsplash.com/photo-1604176354204-9268737828e4?w=400&q=80" },
+                    { name: "Comfort Flex Jeggings", img: "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=400&q=80" },
+                    { name: "Streetwear Oversized Hoodie", img: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=400&q=80" },
                 ],
             },
         ],
@@ -77,37 +78,41 @@ const products = {
             {
                 name: "Five Pocket Twill",
                 items: [
-                    { name: "Men's Five Pocket Twill" },
-                    { name: "Men's Five Pocket Twill" },
-                    { name: "Men's Five Pocket Twill" },
-                    { name: "Men's Five Pocket Twill" },
+                    { name: "Men's Five Pocket Twill", img: "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80" },
+                    { name: "Men's Five Pocket Twill", img: "https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=400&q=80" },
+                    { name: "Men's Five Pocket Twill", img: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=400&q=80" },
+                    { name: "Men's Five Pocket Twill", img: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&q=80" },
                 ],
             },
             {
                 name: "Ladies Dress & Jackets",
                 items: [
-                    { name: "Ladies Dresses" },
-                    { name: "Ladies Dresses" },
-                    { name: "Ladies Jacket" },
-                    { name: "Ladies Jacket" },
+                    { name: "Ladies Dresses", img: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&q=80" },
+                    { name: "Ladies Dresses", img: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400&q=80" },
+                    { name: "Ladies Jacket", img: "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=400&q=80" },
+                    { name: "Ladies Jacket", img: "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=400&q=80" },
+
+
                 ],
             },
             {
                 name: "Girls Denim",
                 items: [
-                    { name: "Girls Wide Leg Jeggings" },
-                    { name: "Girls Wide Leg Anti-Panic Tag" },
-                    { name: "Premium Heavyweight Hoodie" },
-                    { name: "Streetwear Oversized Hoodie" },
+                    { name: "Girls Wide Leg Jeggings", img: "https://images.unsplash.com/photo-1475178626620-a4d074967452?w=400&q=80" },
+                    { name: "Girls Wide Leg Anti-Panic Tag", img: "https://images.unsplash.com/photo-1604176354204-9268737828e4?w=400&q=80" },
+                    { name: "Girls Slim Fit Denim", img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=400&q=80" },
+                    { name: "Girls Casual Denim Jeans", img: "https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=400&q=80" },
                 ],
             },
             {
                 name: "Jeansnes",
                 items: [
-                    { name: "Stretch Fit Denim Jeggings" },
-                    { name: "High-Waist Slim Jeggings" },
-                    { name: "Comfort Flex Jeggings" },
-                    { name: "Streetwear Oversized Hoodie" },
+                    { name: "Stretch Fit Denim Jeggings", img: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=400&q=80" },
+
+                    { name: "Comfort Flex Jeggings", img: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&q=80" },
+                    { name: "Jeggings", img: "https://images.unsplash.com/photo-1560243563-062bfc001d68?w=400&q=80" },
+                    { name: "Girls Wide Leg Jeggings", img: "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&q=80" },
+
                 ],
             },
         ],
@@ -119,7 +124,8 @@ export default function BuyingHouse() {
         <main className="w-full overflow-x-hidden font-sans">
 
             {/* ===== HERO BANNER ===== */}
-            <section className="relative w-full h-56 sm:h-72 md:h-80 flex flex-col items-center justify-center text-center px-4 sm:px-8 mt-12">
+            {/* ✅ FIX 1 - height বাড়ানো */}
+            <section className="relative w-full h-[500px] sm:h-[550px] md:h-[600px] flex flex-col items-center justify-center text-center px-4 sm:px-8 mt-12">
                 <img
                     src={heroImg}
                     alt="buying house hero"
@@ -127,7 +133,6 @@ export default function BuyingHouse() {
                 />
                 <div className="absolute inset-0 bg-black/55 z-0" />
                 <div className="relative z-10 flex flex-col items-center px-4">
-                    {/* Breadcrumb */}
                     <div className="flex items-center gap-2 text-white/70 text-xs sm:text-sm mb-3 sm:mb-4 flex-wrap justify-center">
                         <Link to="/" className="hover:text-white transition-colors">Home</Link>
                         <span>›</span>
@@ -155,44 +160,17 @@ export default function BuyingHouse() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
                         {[
-                            {
-                                icon: "📦",
-                                title: "Product development and sampling",
-                                desc: "We create service that match your ideal results",
-                                highlight: true,
-                            },
-                            {
-                                icon: "🔍",
-                                title: "Supplier selection and evaluation",
-                                desc: "We find the manufacturers who meet your standards",
-                            },
-                            {
-                                icon: "💰",
-                                title: "Price negotiation and order procurement",
-                                desc: "We secure the best terms for your orders.",
-                            },
-                            {
-                                icon: "🏭",
-                                title: "Production follow-up and quality inspection",
-                                desc: "We monitor every batch from loom to shipment.",
-                            },
+                            { icon: "📦", title: "Product development and sampling", desc: "We create service that match your ideal results", highlight: true },
+                            { icon: "🔍", title: "Supplier selection and evaluation", desc: "We find the manufacturers who meet your standards" },
+                            { icon: "💰", title: "Price negotiation and order procurement", desc: "We secure the best terms for your orders." },
+                            { icon: "🏭", title: "Production follow-up and quality inspection", desc: "We monitor every batch from loom to shipment." },
                         ].map((item) => (
-                            <div
-                                key={item.title}
-                                className={`flex flex-col p-5 sm:p-6 rounded-2xl border transition-all duration-300 hover:shadow-lg ${item.highlight
-                                    ? "bg-[#1a9fd4] text-white border-[#1a9fd4]"
-                                    : "bg-white text-gray-900 border-gray-100"
-                                    }`}
-                            >
+                            <div key={item.title} className={`flex flex-col p-5 sm:p-6 rounded-2xl border transition-all duration-300 hover:shadow-lg ${item.highlight ? "bg-[#1a9fd4] text-white border-[#1a9fd4]" : "bg-white text-gray-900 border-gray-100"}`}>
                                 <div className={`text-2xl mb-4 w-10 h-10 flex items-center justify-center rounded-lg ${item.highlight ? "bg-white/20" : "bg-gray-50"}`}>
                                     {item.icon}
                                 </div>
-                                <h3 className={`text-base font-bold mb-2 ${item.highlight ? "text-white" : "text-gray-900"}`}>
-                                    {item.title}
-                                </h3>
-                                <p className={`text-sm leading-relaxed ${item.highlight ? "text-white/80" : "text-gray-500"}`}>
-                                    {item.desc}
-                                </p>
+                                <h3 className={`text-base font-bold mb-2 ${item.highlight ? "text-white" : "text-gray-900"}`}>{item.title}</h3>
+                                <p className={`text-sm leading-relaxed ${item.highlight ? "text-white/80" : "text-gray-500"}`}>{item.desc}</p>
                             </div>
                         ))}
                     </div>
@@ -218,8 +196,13 @@ export default function BuyingHouse() {
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-5">
                                     {sub.items.map((item, i) => (
                                         <div key={i} className="flex flex-col items-center group">
-                                            <div className="w-full aspect-square bg-gray-200 rounded-xl mb-2 sm:mb-3 flex items-center justify-center text-gray-400 text-xs group-hover:shadow-md transition-shadow duration-200">
-                                                📷
+                                            {/* ✅ FIX 2 - Unsplash image */}
+                                            <div className="w-full aspect-square rounded-xl mb-2 sm:mb-3 overflow-hidden">
+                                                <img
+                                                    src={item.img}
+                                                    alt={item.name}
+                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                />
                                             </div>
                                             <p className="text-center text-xs text-gray-600 leading-tight">{item.name}</p>
                                         </div>
@@ -238,8 +221,12 @@ export default function BuyingHouse() {
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-5">
                                     {sub.items.map((item, i) => (
                                         <div key={i} className="flex flex-col items-center group">
-                                            <div className="w-full aspect-square bg-gray-200 rounded-xl mb-2 sm:mb-3 flex items-center justify-center text-gray-400 text-xs group-hover:shadow-md transition-shadow duration-200">
-                                                📷
+                                            <div className="w-full aspect-square rounded-xl mb-2 sm:mb-3 overflow-hidden">
+                                                <img
+                                                    src={item.img}
+                                                    alt={item.name}
+                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                />
                                             </div>
                                             <p className="text-center text-xs text-gray-600 leading-tight">{item.name}</p>
                                         </div>
@@ -255,7 +242,6 @@ export default function BuyingHouse() {
             <section className="w-full py-14 sm:py-20 px-4 sm:px-8 lg:px-16 xl:px-24 bg-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-start">
-                        {/* Left */}
                         <div className="lg:sticky lg:top-24">
                             <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest mb-3">Process</p>
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">How we work</h2>
@@ -263,7 +249,6 @@ export default function BuyingHouse() {
                                 Discuss
                             </button>
                         </div>
-                        {/* Right - Steps */}
                         <div className="flex flex-col">
                             {[
                                 { icon: "🤲", title: "Consultation", desc: "We listen to your needs and understand your specifications", color: "bg-orange-100" },
@@ -276,9 +261,7 @@ export default function BuyingHouse() {
                                         <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${item.color} flex items-center justify-center text-lg sm:text-xl flex-shrink-0 z-10`}>
                                             {item.icon}
                                         </div>
-                                        {index < arr.length - 1 && (
-                                            <div className="w-0.5 h-10 sm:h-12 bg-gray-200 my-1" />
-                                        )}
+                                        {index < arr.length - 1 && <div className="w-0.5 h-10 sm:h-12 bg-gray-200 my-1" />}
                                     </div>
                                     <div className="pb-8 sm:pb-10">
                                         <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1">{item.title}</h3>
