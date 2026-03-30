@@ -288,7 +288,7 @@ export default function Navbar() {
     ${scrolled ? "bg-white shadow-md" : "bg-white/80"}
     backdrop-blur-md `}
         >
-            <div className="max-w-8xl mx-5 px-6 lg:px-10 h-28 flex items-center justify-between">
+            <div className="max-w-8xl mx-5 px-6 lg:px-10 h-20 flex items-center justify-between">
 
                 {/* LOGO */}
                 <div className="flex items-center gap-3">
