@@ -117,11 +117,11 @@ export default function Factory() {
                             { label: "NEEDLE DETECTOR MACHINE", img: heroImg2 },  // needle detector এর image
                             { label: "THREAD SUCKING MACHINE", img: heroImg3 },   // thread sucking এর image
                         ].map((machine) => (
-                            <div key={machine.label} className="relative w-full h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden group">
+                            <div key={machine.label} className="relative w-full h-76 sm:h-72 md:h-80 rounded-xl overflow-hidden group">
                                 <img
                                     src={machine.img}
                                     alt={machine.label}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    className="w-full h-full object-cover  transition-transform duration-300"
                                 />
                                 {/* Label overlay */}
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 px-4 sm:px-6 py-3 sm:py-4">
