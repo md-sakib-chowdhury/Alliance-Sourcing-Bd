@@ -71,8 +71,11 @@
 //     </section>
 //   );
 // }
+// 
 import heroImg from "../components/Assets/image 1.png";
-
+import heroImg2 from "../components/Assets/image 1.png";
+import heroImg3 from"../components/Assets/Placeholder Image.png";
+import heroImg4 from "../components/Assets/Placeholder Image 2.png";
 export function loader() { return {}; }
 
 export default function Home() {
@@ -81,11 +84,7 @@ export default function Home() {
 
       {/* ===== HERO SECTION ===== */}
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 lg:px-24 overflow-hidden mt-12">
-        <img
-          src={heroImg}
-          alt="hero bg"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
+        <img src={heroImg} alt="hero bg" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-black/50 z-0" />
         <div className="relative z-10 flex flex-col items-center text-center max-w-4xl w-full">
           <div className="mb-6">
@@ -118,30 +117,14 @@ export default function Home() {
           <div className="text-center mb-14">
             <p className="text-[#1a9fd4] text-sm font-semibold uppercase tracking-widest mb-2">Why</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">What sets us apart</h2>
-            <p className="text-gray-500 text-base sm:text-lg">We stand behind every garment</p>
+            <p className="text-gray-500 text-lg">We stand behind every garment</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {
-                icon: "🏅",
-                title: "Quality assurance",
-                desc: "Rigorous testing at every production stage"
-              },
-              {
-                icon: "⚖️",
-                title: "Ethical sourcing",
-                desc: "Fair wages and safe working conditions"
-              },
-              {
-                icon: "🚚",
-                title: "On-time delivery",
-                desc: "Your deadlines are our commitments"
-              },
-              {
-                icon: "🌐",
-                title: "Global network",
-                desc: "Connected across Bangladesh and beyond"
-              },
+              { icon: "🏅", title: "Quality assurance", desc: "Rigorous testing at every production stage" },
+              { icon: "⚖️", title: "Ethical sourcing", desc: "Fair wages and safe working conditions" },
+              { icon: "🚚", title: "On-time delivery", desc: "Your deadlines are our commitments" },
+              { icon: "🌐", title: "Global network", desc: "Connected across Bangladesh and beyond" },
             ].map((item) => (
               <div key={item.title} className="flex flex-col items-start p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow duration-300 bg-white">
                 <div className="text-3xl mb-4">{item.icon}</div>
@@ -163,27 +146,11 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {[
-              {
-                icon: "💬",
-                title: "Consultation",
-                desc: "We listen to your needs and understand your specifications"
-              },
-              {
-                icon: "🤝",
-                title: "Supplier match",
-                desc: "We connect you with manufacturers who meet your standards"
-              },
-              {
-                icon: "📋",
-                title: "Order management",
-                desc: "We negotiate terms and oversee production from start to finish"
-              },
-              {
-                icon: "✅",
-                title: "Quality check",
-                desc: "Every batch is tested against your specifications and standards"
-              },
-            ].map((item, index) => (
+              { icon: "💬", title: "Consultation", desc: "We listen to your needs and understand your specifications" },
+              { icon: "🤝", title: "Supplier match", desc: "We connect you with manufacturers who meet your standards" },
+              { icon: "📋", title: "Order management", desc: "We negotiate terms and oversee production from start to finish" },
+              { icon: "✅", title: "Quality check", desc: "Every batch is tested against your specifications and standards" },
+            ].map((item) => (
               <div key={item.title} className="flex items-start gap-5 p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-[#e8f6fc] flex items-center justify-center text-2xl">
                   {item.icon}
@@ -202,11 +169,16 @@ export default function Home() {
       <section className="w-full py-20 px-6 sm:px-12 lg:px-24 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Image placeholder */}
-            <div className="w-full h-80 lg:h-[420px] rounded-2xl bg-gray-200 flex items-center justify-center text-gray-400 text-lg font-medium">
-              📷 Image এখানে বসাও
+
+            {/* ✅ FIX 1 - absolute সরানো হয়েছে */}
+            <div className="w-full h-80 lg:h-[420px] rounded-2xl overflow-hidden">
+              <img
+                src={heroImg2}
+                alt="buying house"
+                className="w-full h-full object-cover"
+              />
             </div>
-            {/* Content */}
+
             <div>
               <p className="text-[#1a9fd4] text-sm font-semibold uppercase tracking-widest mb-3">Services</p>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
@@ -246,42 +218,15 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {[
-              {
-                icon: "📦",
-                title: "Product development and sampling",
-                desc: "We find and shortlist your ideal results",
-                highlight: true
-              },
-              {
-                icon: "🔍",
-                title: "Supplier selection and evaluation",
-                desc: "We find and shortlist your best factories"
-              },
-              {
-                icon: "💰",
-                title: "Price negotiation and order placement",
-                desc: "We secure the best terms for your orders"
-              },
-              {
-                icon: "🏭",
-                title: "Production follow-up and quality inspection",
-                desc: "We monitor every batch from loom to shipment"
-              },
+              { icon: "📦", title: "Product development and sampling", desc: "We find and shortlist your ideal results", highlight: true },
+              { icon: "🔍", title: "Supplier selection and evaluation", desc: "We find and shortlist your best factories" },
+              { icon: "💰", title: "Price negotiation and order placement", desc: "We secure the best terms for your orders" },
+              { icon: "🏭", title: "Production follow-up and quality inspection", desc: "We monitor every batch from loom to shipment" },
             ].map((item) => (
-              <div
-                key={item.title}
-                className={`p-7 rounded-2xl border transition-all duration-300 hover:shadow-lg ${item.highlight
-                  ? "bg-[#1a9fd4] text-white border-[#1a9fd4]"
-                  : "bg-white text-gray-900 border-gray-100"
-                  }`}
-              >
-                <div className={`text-3xl mb-4`}>{item.icon}</div>
-                <h3 className={`text-lg font-bold mb-2 ${item.highlight ? "text-white" : "text-gray-900"}`}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm leading-relaxed ${item.highlight ? "text-white/80" : "text-gray-500"}`}>
-                  {item.desc}
-                </p>
+              <div key={item.title} className={`p-7 rounded-2xl border transition-all duration-300 hover:shadow-lg ${item.highlight ? "bg-[#1a9fd4] text-white border-[#1a9fd4]" : "bg-white text-gray-900 border-gray-100"}`}>
+                <div className="text-3xl mb-4">{item.icon}</div>
+                <h3 className={`text-lg font-bold mb-2 ${item.highlight ? "text-white" : "text-gray-900"}`}>{item.title}</h3>
+                <p className={`text-sm leading-relaxed ${item.highlight ? "text-white/80" : "text-gray-500"}`}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -292,7 +237,6 @@ export default function Home() {
       <section className="w-full py-20 px-6 sm:px-12 lg:px-24 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
             <div>
               <p className="text-[#1a9fd4] text-sm font-semibold uppercase tracking-widest mb-3">Factory</p>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
@@ -322,9 +266,14 @@ export default function Home() {
                 Details
               </button>
             </div>
-            {/* Image placeholder */}
-            <div className="w-full h-80 lg:h-[420px] rounded-2xl bg-gray-200 flex items-center justify-center text-gray-400 text-lg font-medium">
-              📷 Image এখানে বসাও
+
+            {/* ✅ FIX 2 - Factory image */}
+            <div className="w-full h-80 lg:h-[420px] rounded-2xl overflow-hidden">
+              <img
+                src={heroImg3}
+                alt="factory"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -334,11 +283,16 @@ export default function Home() {
       <section className="w-full py-20 px-6 sm:px-12 lg:px-24 bg-[#fdf8f4]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Image placeholder */}
-            <div className="w-full h-80 lg:h-[420px] rounded-2xl bg-gray-200 flex items-center justify-center text-gray-400 text-lg font-medium">
-              📷 Image এখানে বসাও
+
+            {/* ✅ FIX 3 - Products image */}
+            <div className="w-full h-80 lg:h-[420px] rounded-2xl overflow-hidden">
+              <img
+                src={heroImg4}
+                alt="products"
+                className="w-full h-full object-cover"
+              />
             </div>
-            {/* Content */}
+
             <div>
               <p className="text-[#1a9fd4] text-sm font-semibold uppercase tracking-widest mb-3">Catalog</p>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
@@ -374,11 +328,7 @@ export default function Home() {
 
       {/* ===== CTA SECTION ===== */}
       <section className="relative w-full py-28 px-6 sm:px-12 lg:px-24 overflow-hidden">
-        <img
-          src={heroImg}
-          alt="cta bg"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
+        <img src={heroImg} alt="cta bg" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-black/60 z-0" />
         <div className="relative z-10 flex flex-col items-center text-center max-w-3xl mx-auto">
           <p className="text-[#1a9fd4] text-sm font-semibold uppercase tracking-widest mb-3">Closing</p>

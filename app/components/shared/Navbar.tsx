@@ -281,14 +281,14 @@ export default function Navbar() {
     return (
         // <nav className={`fixed top-0 left-0 w-screen z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-md" : "bg-white"}`}>
         <nav className={`fixed
-    top-4 sm:top-8 lg:top-16
+    top-4 sm:top-8 lg:top-6
     left-1/2 -translate-x-1/2
  w-[92vw] sm:w-[88vw] lg:w-[96vw] xl:w-[98vw]
     z-50 transition-all duration-300
     ${scrolled ? "bg-white shadow-md" : "bg-white/80"}
     backdrop-blur-md `}
         >
-            <div className="max-w-8xl mx-5 px-6 lg:px-10 h-22 flex items-center justify-between">
+            <div className="max-w-8xl mx-5 px-6 lg:px-10 h-28 flex items-center justify-between">
 
                 {/* LOGO */}
                 <div className="flex items-center gap-3">
